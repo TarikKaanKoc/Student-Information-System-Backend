@@ -14,7 +14,7 @@ public class ConselorManager implements IConselorService {
 
 
     private IConselorDao conselorDao;
-
+    private Conselor conselor;
     @Autowired
     public ConselorManager(IConselorDao conselorDao) {
         this.conselorDao = conselorDao;
@@ -48,5 +48,17 @@ public class ConselorManager implements IConselorService {
             return new ErrorDataResult<>("Data Not Found");
         }
         return new SuccessDataResult<>(dataResult,"Successful");
+    }
+
+    @Override
+    public Result update(int id) {
+        var result = conselorDao.findById(id);
+        if (result!=null){
+            this.conselorDao.save(conselor);
+           return new SuccessDataResult<>(result,"Successful");
+
+        }else{
+            return new ErrorDataResult<>("Data Not Found");
+        }
     }
 }

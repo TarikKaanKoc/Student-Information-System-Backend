@@ -2,6 +2,7 @@ package com.rtys.mtuobs.API;
 
 import com.rtys.mtuobs.Business.Abstracts.IConselorService;
 import com.rtys.mtuobs.Core.Utilities.DataResult;
+import com.rtys.mtuobs.Core.Utilities.Result;
 import com.rtys.mtuobs.Entities.Concretes.Conselor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -40,6 +41,11 @@ public class ConselorController {
     @GetMapping("/findByEmailAddress")
     public DataResult<Conselor>findByEmailAddress(@RequestParam String emailAddress){
         return conselorService.findByEmailAddress(emailAddress);
+    }
+
+    @PutMapping("/update")
+    public Result update(@RequestBody int id){
+        return this.conselorService.update(id);
     }
 
 

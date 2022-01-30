@@ -12,5 +12,6 @@ public interface IConselorService {
     Result add(Conselor conselor);
     DataResult<Conselor> findById(int id);
     DataResult<Conselor>findByEmailAddress(String emailAddress);
+    Result update(int id);
 
 }
