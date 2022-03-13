@@ -1,2 +1,2 @@
-# Student-Information-System-Backend
+# Student Information System Backend
 Almost all kinds of data allowed by the school administration are shared with the students. Thus, students can follow both their own status and the status of their school instantly. Moreover, in some applications, students can even make some adjustments to their profiles. Therefore, such applications offer significant gains in ensuring a successful interaction!
